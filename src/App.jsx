@@ -10,6 +10,8 @@ import Header from './user/Header'
 import Footer from './user/Footer'
 import Home from './user/Home'
 import Commonheader from './Common/Commonheader'
+import Userauth from './user/Userauth'
+import Login from './Common/Login'
 
 function App() {
 
@@ -20,6 +22,7 @@ function App() {
       {/* Common */}
       <Route path='/' element={<Landingpage/>}/>
       <Route path='*' element={<Pnf/>}/>
+      <Route path='/login' element={<Login/>}/>
       <Route path='common-header' element={<Commonheader/>}/>
       {/* Admin */}
       <Route path='admin-header' element={<Adminheader/>}/>
@@ -29,6 +32,8 @@ function App() {
       <Route path='user-header' element={<Header/>}/>
       <Route path='user-footer' element={<Footer/>}/>
       <Route path='user-home' element={<Home/>}/>
+         <Route path='/user-login' element={<Userauth />} />
+       <Route path='/user-register' element={<Userauth register />} /> 
 
 
 

@@ -1,16 +1,17 @@
 import React from "react";
 import Commonheader from "./Commonheader";
+import { Link } from "react-router-dom";
 
 function Landingpage() {
   return (
     <>
       <Commonheader />
 
-      <div className="min-w-screen h-160 flex justify-center items-center bg-amber-50 
+      <div className="min-w-screen h-160 flex justify-center items-center bg-white 
                       px-2 sm:px-0">
         <div
           className="
-            w-full sm:w-320
+            w-full sm:w-7xl
             h-auto sm:h-150
             transition-all duration-300 
             hover:shadow-[0_0_20px_red] 
@@ -64,9 +65,11 @@ function Landingpage() {
                 Order Now
               </button>
 
-              <button className="font-semibold hover:bg-red-600 hover:text-white bg-white border rounded-2xl border-red-600 w-40 sm:w-25 h-10 text-red-600">
-                Know More
-              </button>
+             <Link to="/login">
+                <button className="font-semibold hover:bg-red-600 hover:text-white bg-white border rounded-2xl border-red-600 w-40 sm:w-25 h-10 text-red-600">
+                  Know More
+                </button>
+             </Link>
             </div>
           </div>
         </div>
