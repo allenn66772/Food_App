@@ -12,7 +12,8 @@ import Home from './user/Home'
 import Commonheader from './Common/Commonheader'
 import Userauth from './user/Userauth'
 import Login from './Common/Login'
-
+import About from './Common/About'
+import Contact from './Common/Contact'
 function App() {
 
 
@@ -24,6 +25,8 @@ function App() {
       <Route path='*' element={<Pnf/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='common-header' element={<Commonheader/>}/>
+      <Route path='/about' element={<About/>}/>
+      <Route path='/contact' element={<Contact/>}/>
       {/* Admin */}
       <Route path='admin-header' element={<Adminheader/>}/>
       <Route path='admin-footer' element={<Adminfooter/>}/>

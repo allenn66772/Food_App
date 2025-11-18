@@ -61,11 +61,13 @@ function Landingpage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center sm:justify-center items-center w-full h-auto sm:h-20 mt-5 sm:mt-0">
-              <button className="font-semibold hover:bg-white hover:text-red-600 hover:border hover:border-red-600 bg-red-600 rounded-2xl w-40 sm:w-25 h-10 text-white">
-                Order Now
-              </button>
+             <Link to='/login'>
+                <button className="font-semibold hover:bg-white hover:text-red-600 hover:border hover:border-red-600 bg-red-600 rounded-2xl w-40 sm:w-25 h-10 text-white">
+                  Order Now
+                </button>
+             </Link>
 
-             <Link to="/login">
+             <Link to="/about">
                 <button className="font-semibold hover:bg-red-600 hover:text-white bg-white border rounded-2xl border-red-600 w-40 sm:w-25 h-10 text-red-600">
                   Know More
                 </button>

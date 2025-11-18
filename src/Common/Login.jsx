@@ -61,27 +61,29 @@ function Login() {
             <div className="bg-red-600 w-4 h-140 rounded-2xl"></div>
     
             {/* THIRD DIV */}
-            <div className="w-120 h-140 bg-amber-400 rounded-2xl p-8 flex flex-col items-center">
+       <div className="w-96 bg-amber-400 rounded-2xl p-8 flex flex-col items-center shadow-xl">
 
   {/* Title */}
-  <h1 className="text-4xl text-white font-bold mb-6">Login</h1>
+  <h1 className="text-4xl text-white font-bold mb-8">Login</h1>
 
   {/* Options */}
-  <div className="space-y-4 w-full text-center">
-    <label className=" items-center text-white text-lg font-medium">
-      Login as Admin
+  <div className="space-y-5 w-full">
+    
+    <div className="flex justify-between items-center bg-white/20 px-4 py-3 rounded-xl">
+      <span className="text-white text-lg font-semibold">Login as Admin</span>
       <Link className="text-black font-bold underline">Login</Link>
-    </label>
+    </div>
 
-    <label className="flex justify-between items-center text-white text-lg font-medium">
-      Login as User
+    <div className="flex justify-between items-center bg-white/20 px-4 py-3 rounded-xl">
+      <span className="text-white text-lg font-semibold">Login as User</span>
       <Link className="text-black font-bold underline">Login</Link>
-    </label>
+    </div>
 
-    <label className="flex justify-between items-center text-white text-lg font-medium">
-      Login as Hotel
+    <div className="flex justify-between items-center bg-white/20 px-4 py-3 rounded-xl">
+      <span className="text-white text-lg font-semibold">Login as Hotel</span>
       <Link className="text-black font-bold underline">Login</Link>
-    </label>
+    </div>
+
   </div>
 
 </div>
