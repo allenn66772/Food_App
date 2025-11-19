@@ -38,7 +38,7 @@ function Login() {
                   alt="carousel"
                   className={`
                     absolute inset-0 w-full h-full object-cover rounded-2xl
-                    transition-opacity duration-[1500ms] ease-in-out
+                    transition-opacity duration-1500 ease-in-out
                     ${index === currentIndex ? "opacity-100" : "opacity-0"}
                   `}
                 />
