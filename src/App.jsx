@@ -18,6 +18,8 @@ import Vieworder from "./Hotel/Vieworder";
 import Cart from "./user/Cart";
 import Hotelauth from "./Hotel/Hotelauth";
 import Adminauth from "./admin/Adminauth";
+import AddedDishes from "./Hotel/AddedDishes";
+import Checkout from "./user/Checkout";
 function App() {
   return (
     <>
@@ -34,6 +36,7 @@ function App() {
         <Route path="/admin-footer" element={<Adminfooter />} />
         <Route path="/admin-home" element={<Adminhome />} />
         <Route path="/admin-login" element={<Adminauth/>}/>
+        <Route path="/added-dishes" element={<AddedDishes/>}/>
         <Route path="/admin-register" element={<Adminauth register/>}/>
         {/* user */}
         <Route path="user-header" element={<Header />} />
@@ -42,6 +45,7 @@ function App() {
         <Route path="cart" element={<Cart />} />
         <Route path="/user-login" element={<Userauth />} />
         <Route path="/user-register" element={<Userauth register />} />
+        <Route path="/checkout" element={<Checkout/>}/>
 
         {/* Hotel */}
         <Route path="hotel-home" element={<Hotelhome />} />

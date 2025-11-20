@@ -1,9 +1,12 @@
 import React from "react";
+import Footer from "./Footer";
+import Header from "./Header";
 
 function Cart() {
   return (
     <>
-      <div className="min-h-screen bg-gray-100 p-6">
+    <Header/>
+      <div className="min-h-screen bg-gray-100 p-26">
         {/* Page Header */}
         <h1 className="text-3xl font-bold text-gray-800 mb-6">Your Cart</h1>
 
@@ -107,6 +110,7 @@ function Cart() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

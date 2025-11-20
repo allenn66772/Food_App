@@ -25,10 +25,10 @@ function Hotelauth({register}) {
     }
   return (
     <>
-      <div className='w-full min-h-screen rounde flex justify-center items-center flex-col bg-[url("https://cdn.prod.website-files.com/5acc07fc6634d231ac4bcca6/6320a0603151dde41d816976_one2_best_food_delivery_service.jpeg")] bg-cover bg-center'>
+      <div className='w-full min-h-screen rounde flex justify-center items-center flex-col   bg-cover bg-center'>
         <div className='p-10'>
           <h1 className='text-3xl font-bold text-center'>Login as Hotel</h1>
-          <div style={{ width: "400px" }} className='bg-red-700 text-white p-5 flex rounded-3xl flex-col my-5 justify-center items-center '>
+          <div style={{ width: "400px" }} className='bg-red-700 text-white p-5 hover:shadow-[0_0_20px_blue] flex rounded-3xl flex-col my-5 justify-center items-center '>
             <div style={{ width: "100px", height: "100px", borderRadius: "50%" }} className='border mb-3 flex justify-center items-center '>
               <FaCircleUser className='text-6xl ' />
  

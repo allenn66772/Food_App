@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
+import Footer from '../user/Footer';
+import Commonheader from './Commonheader';
 
 function Login() {
 
@@ -24,8 +26,8 @@ function Login() {
 
   return (
     <>
-   <div style={{backgroundImage:`url("https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/healthy-eating-ingredients-1296x728-header.jpg?w=1155&h=1528")`, backgroundSize: "cover",
-            backgroundPosition: "center",}} className='w-full h-screen'>
+    <Commonheader/>
+   <div className='w-full h-screen'>
           {/* CENTER WRAPPER */}
           <div  className="flex justify-center items-center gap-10  pt-20">
     
@@ -92,6 +94,7 @@ function Login() {
 
           </div>
    </div>
+   <Footer/>
     </>
   );
 }

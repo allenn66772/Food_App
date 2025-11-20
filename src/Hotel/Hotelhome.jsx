@@ -1,111 +1,106 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Footer from "../user/Footer";
+
 
 function Hotelhome() {
-  const [openModal, setOpenModal] = useState(false);
+ 
   return (
     <>
-      <div className="min-h-screen bg-gray-100 p-6">
-        {/* Page Header */}
-        <header className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-800">
-            Manage Your Food Items
-          </h1>
-          <button
-            onClick={() => setOpenModal(true)}
-            className="bg-amber-500 text-white px-5 py-2 rounded-xl shadow hover:bg-amber-600"
-          >
-            + Add New Item
-          </button>
-        </header>
+   <div className="min-h-screen bg-gray-100 flex">
 
-        {/* Food Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white shadow rounded-2xl overflow-hidden">
+      {/* Sidebar */}
+      <aside className="w-64 bg-linear-to-b from-orange-600 to-amber-700 text-white p-6 shadow-xl hidden md:block">
+        <h2 className="text-3xl font-extrabold mb-10">Hotel Panel</h2>
+
+        <ul className="space-y-6 text-lg">
+          <li className="hover:text-gray-200 cursor-pointer">Dashboard</li>
+          <li className="hover:text-gray-200 cursor-pointer">Orders</li>
+          <li className="hover:text-gray-200 cursor-pointer">Menu Items</li>
+        <Link to='/added-dishes' className="hover:text-gray-200 cursor-pointer">  Added Dishes</Link>
+          <li className="hover:text-gray-200 cursor-pointer">Settings</li>
+        </ul>
+      </aside>
+
+      {/* Main Content */}
+      <main className="flex-1 p-8">
+
+        {/* Top Bar */}
+        <div className="flex justify-between items-center mb-10">
+          <h1 className="text-3xl font-bold text-gray-800">Dashboard</h1>
+
+          <div className="flex items-center gap-5">
+            <span className="text-gray-700 font-semibold">Welcome, Owner</span>
             <img
-              src="https://images.unsplash.com/photo-1604909052688-c3a3b9f73a7d"
-              className="w-full h-40 object-cover"
-              alt="Food"
+              src="https://i.pravatar.cc/50"
+              alt="profile"
+              className="w-10 h-10 rounded-full border-2 border-orange-500"
             />
-            <div className="p-4">
-              <h2 className="text-xl font-semibold">Paneer Butter Masala</h2>
-              <p className="text-gray-600 text-sm mt-1">
-                Creamy curry served with naan or rice.
-              </p>
-
-              <div className="mt-3 flex items-center gap-3">
-                <span className="text-lg font-bold text-amber-600">₹299</span>
-                <span className="text-sm line-through text-gray-400">₹350</span>
-                <span className="bg-green-500 text-xs text-white px-2 py-1 rounded">
-                  15% OFF
-                </span>
-              </div>
-
-              <div className="flex justify-between mt-4">
-                <button className="bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-600">
-                  Edit
-                </button>
-                <button className="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600">
-                  Delete
-                </button>
-              </div>
-            </div>
           </div>
         </div>
 
-        {/* ------------------------------------------------ */}
-        {/* ADD FOOD MODAL */}
-        {/* ------------------------------------------------ */}
-        {openModal && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-            <div className="bg-white w-11/12 max-w-lg rounded-2xl shadow-lg p-6">
-              <h2 className="text-2xl font-bold mb-4 text-gray-800">
-                Add New Food Item
-              </h2>
+        {/* Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
 
-              {/* Form Inputs (Design Only) */}
-              <div className="space-y-3">
-                <input
-                  type="text"
-                  placeholder="Food Name"
-                  className="w-full border rounded-lg p-2"
-                />
-                <textarea
-                  placeholder="Food Description"
-                  className="w-full border rounded-lg p-2 h-24"
-                ></textarea>
-                <input
-                  type="number"
-                  placeholder="Price"
-                  className="w-full border rounded-lg p-2"
-                />
-                <input
-                  type="number"
-                  placeholder="Discount Price"
-                  className="w-full border rounded-lg p-2"
-                />
-                <input
-                  type="text"
-                  placeholder="Image URL"
-                  className="w-full border rounded-lg p-2"
-                />
-              </div>
-
-              {/* Buttons */}
-              <div className="flex justify-end gap-3 mt-6">
-                <button
-                  onClick={() => setOpenModal(false)}
-                  className="px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400"
-                >
-                  Cancel
-                </button>
-                <button className="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600">
-                  Add Item
-                </button>
-              </div>
-            </div>
+          <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
+            <h3 className="text-gray-400">Total Orders</h3>
+            <p className="text-3xl font-extrabold mt-2 text-orange-600">120</p>
           </div>
-        )}
-      </div>
+
+          <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
+            <h3 className="text-gray-400">Revenue</h3>
+            <p className="text-3xl font-extrabold mt-2 text-green-600">₹52,300</p>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
+            <h3 className="text-gray-400">Items Live</h3>
+            <p className="text-3xl font-extrabold mt-2 text-amber-600">34</p>
+          </div>
+
+        </div>
+
+        {/* Recent Orders */}
+        <div className="bg-white rounded-2xl shadow-xl p-6">
+          <h2 className="text-2xl font-bold mb-5">Recent Orders</h2>
+
+          <table className="w-full text-left">
+            <thead>
+              <tr className="text-gray-500 border-b">
+                <th className="py-3">Customer</th>
+                <th className="py-3">Item</th>
+                <th className="py-3">Price</th>
+                <th className="py-3">Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr className="border-b hover:bg-gray-50">
+                <td className="py-3">John Mathew</td>
+                <td className="py-3">Chicken Biryani</td>
+                <td className="py-3">₹180</td>
+                <td className="py-3 text-green-600 font-semibold">Delivered</td>
+              </tr>
+
+              <tr className="border-b hover:bg-gray-50">
+                <td className="py-3">Aisha Khan</td>
+                <td className="py-3">Paneer Butter</td>
+                <td className="py-3">₹150</td>
+                <td className="py-3 text-orange-600 font-semibold">Pending</td>
+              </tr>
+
+              <tr className="hover:bg-gray-50">
+                <td className="py-3">Ravi</td>
+                <td className="py-3">Masala Dosa</td>
+                <td className="py-3">₹90</td>
+                <td className="py-3 text-amber-600 font-semibold">On the way</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </main>
+    </div>
+    
     </>
   );
 }
