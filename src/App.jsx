@@ -16,6 +16,8 @@ import Contact from "./Common/Contact";
 import Hotelhome from "./Hotel/Hotelhome";
 import Vieworder from "./Hotel/Vieworder";
 import Cart from "./user/Cart";
+import Hotelauth from "./Hotel/Hotelauth";
+import Adminauth from "./admin/Adminauth";
 function App() {
   return (
     <>
@@ -28,9 +30,11 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         {/* Admin */}
-        <Route path="admin-header" element={<Adminheader />} />
-        <Route path="admin-footer" element={<Adminfooter />} />
-        <Route path="admin-home" element={<Adminhome />} />
+        <Route path="/admin-header" element={<Adminheader />} />
+        <Route path="/admin-footer" element={<Adminfooter />} />
+        <Route path="/admin-home" element={<Adminhome />} />
+        <Route path="/admin-login" element={<Adminauth/>}/>
+        <Route path="/admin-register" element={<Adminauth register/>}/>
         {/* user */}
         <Route path="user-header" element={<Header />} />
         <Route path="user-footer" element={<Footer />} />
@@ -42,6 +46,8 @@ function App() {
         {/* Hotel */}
         <Route path="hotel-home" element={<Hotelhome />} />
         <Route path="view-order" element={<Vieworder />} />
+        <Route path="/hotel-login" element={<Hotelauth/>}/>
+        <Route path="/hotel-register" element={<Hotelauth register/>}/>
       </Routes>
     </>
   );

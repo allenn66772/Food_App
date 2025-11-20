@@ -67,21 +67,23 @@ function Login() {
   <h1 className="text-4xl text-white font-bold mb-8">Login</h1>
 
   {/* Options */}
-  <div className="space-y-5 w-full">
-    
-    <div className="flex justify-between items-center bg-white/20 px-4 py-3 rounded-xl">
+ 
+
+  {/* Options */}
+  <div className="space-y-6 w-full">
+
+    <div className="flex justify-between items-center bg-white/25 px-5 py-4 rounded-2xl shadow-md backdrop-blur-sm hover:bg-white/40 transition-all duration-300 cursor-pointer">
       <span className="text-white text-lg font-semibold">Login as Admin</span>
-      <Link className="text-black font-bold underline">Login</Link>
+      <Link to="/admin-login" className="text-white font-bold underline underline-offset-4 hover:text-gray-200">
+        Login
+      </Link>
     </div>
 
-    <div className="flex justify-between items-center bg-white/20 px-4 py-3 rounded-xl">
-      <span className="text-white text-lg font-semibold">Login as User</span>
-      <Link className="text-black font-bold underline">Login</Link>
-    </div>
-
-    <div className="flex justify-between items-center bg-white/20 px-4 py-3 rounded-xl">
+    <div className="flex justify-between items-center bg-white/25 px-5 py-4 rounded-2xl shadow-md backdrop-blur-sm hover:bg-white/40 transition-all duration-300 cursor-pointer">
       <span className="text-white text-lg font-semibold">Login as Hotel</span>
-      <Link className="text-black font-bold underline">Login</Link>
+      <Link to="/hotel-login" className="text-white font-bold underline underline-offset-4 hover:text-gray-200">
+        Login
+      </Link>
     </div>
 
   </div>

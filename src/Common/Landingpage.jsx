@@ -1,6 +1,7 @@
 import React from "react";
 import Commonheader from "./Commonheader";
 import { Link } from "react-router-dom";
+import Footer from "../user/Footer";
 
 function Landingpage() {
   return (
@@ -61,7 +62,7 @@ function Landingpage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center sm:justify-center items-center w-full h-auto sm:h-20 mt-5 sm:mt-0">
-             <Link to='/login'>
+             <Link to='/user-login'>
                 <button className="font-semibold hover:bg-white hover:text-red-600 hover:border hover:border-red-600 bg-red-600 rounded-2xl w-40 sm:w-25 h-10 text-white">
                   Order Now
                 </button>
@@ -76,6 +77,7 @@ function Landingpage() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

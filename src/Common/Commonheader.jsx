@@ -4,43 +4,31 @@ import { Link } from "react-router-dom";
 function Commonheader() {
   return (
     <>
-      <header className="w-full h-15 bg-amber-50 shadow">
-        <div className="flex items-center justify-between  px-4 py-3 md:px-10">
-          
+         <header className="w-full shadow-md bg-white  top-0 left-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        
+        {/* Logo */}
+        <h1 className="text-2xl font-bold text-red-600">
+          Food<span className="text-gray-800">Hub</span>
+        </h1>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex space-x-8 text-gray-700 font-medium">
+          <a href="#" className="hover:text-red-600 duration-200">Home</a>
+          <a href="#" className="hover:text-red-600 duration-200">Menu</a>
          
-          <h1 className="font-bold text-3xl text-red-600">Food APP</h1>
+          <a href="#" className="hover:text-red-600 duration-200">Contact</a>
+           <Link  to="/login" className="hover:text-red-600 duration-200">login</Link>
+  </nav>
 
-          {/* Navigation */}
-       <nav
-  className="
-    text-sm md:text-base 
-    flex items-center gap-4 
-    flex-col sm:flex-row
-  "
->
-  <Link
-    to="/about"
-    className="text-gray-700 hover:text-red-600 font-medium"
-  >
-    About Us
-  </Link>
-
-  <Link
-    to="/contact"
-    className="text-gray-700 hover:text-red-600 font-medium"
-  >
-    Contact
-  </Link>
-
-  <button className="bg-black px-5 py-2 rounded-2xl text-white border hover:bg-white hover:text-black">
-    <Link to="/login" className="block w-full text-center">
-      Login
-    </Link>
-  </button>
-</nav>
-
-        </div>
-      </header>
+        {/* Mobile Menu Button */}
+        <button className="md:hidden flex flex-col space-y-1">
+          <span className="block w-6 h-0.5 bg-gray-700"></span>
+          <span className="block w-6 h-0.5 bg-gray-700"></span>
+          <span className="block w-6 h-0.5 bg-gray-700"></span>
+        </button>
+      </div>
+    </header>
     </>
   );
 }

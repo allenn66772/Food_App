@@ -26,10 +26,10 @@ function Userauth({register}) {
   
   return (
     <>
-      <div className='w-full min-h-screen flex justify-center items-center flex-col bg-[url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJfo7sSzB9Vzxn4UrN8o0HmqkqoXxW4fXm5Q&s")] bg-cover bg-center'>
+      <div className='w-full min-h-screen rounde flex justify-center items-center flex-col bg-[url("https://cdn.prod.website-files.com/5acc07fc6634d231ac4bcca6/6320a0603151dde41d816976_one2_best_food_delivery_service.jpeg")] bg-cover bg-center'>
         <div className='p-10'>
-          <h1 className='text-3xl font-bold text-center'>BOOKSTORE</h1>
-          <div style={{ width: "400px" }} className='bg-blue-950 text-white p-5 flex flex-col my-5 justify-center items-center '>
+          <h1 className='text-3xl font-bold text-center'>Login as User</h1>
+          <div style={{ width: "400px" }} className='bg-red-700 text-white p-5 flex rounded-3xl flex-col my-5 justify-center items-center '>
             <div style={{ width: "100px", height: "100px", borderRadius: "50%" }} className='border mb-3 flex justify-center items-center '>
               <FaCircleUser className='text-6xl ' />
  
@@ -86,7 +86,7 @@ function Userauth({register}) {
               <div className='mt-3'>
               
                   {register ? <p>Are you Already a user <Link className='text-blue-400' to={"/login"} >Login</Link> </p>:
-                  <p>Are you new user? <Link className='text-blue-400' to={"/register"} >Register</Link> </p>}
+                  <p>Are you new user? <Link className='text-blue-400' to={"/user-register"} >Register</Link> </p>}
                
 
               </div>
