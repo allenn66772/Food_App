@@ -8,7 +8,7 @@ function Login() {
   const images = [
     "https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg",
     "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg",
-    "https://images.pexels.com/photos/70498/pexels-photo-70498.jpeg",
+  
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

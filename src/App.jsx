@@ -20,6 +20,7 @@ import Hotelauth from "./Hotel/Hotelauth";
 import Adminauth from "./admin/Adminauth";
 import AddedDishes from "./Hotel/AddedDishes";
 import Checkout from "./user/Checkout";
+import Profile from "./user/Profile";
 function App() {
   return (
     <>
@@ -46,6 +47,7 @@ function App() {
         <Route path="/user-login" element={<Userauth />} />
         <Route path="/user-register" element={<Userauth register />} />
         <Route path="/checkout" element={<Checkout/>}/>
+        <Route path="/profile" element={<Profile/>}/>
 
         {/* Hotel */}
         <Route path="hotel-home" element={<Hotelhome />} />

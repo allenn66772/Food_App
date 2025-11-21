@@ -9,15 +9,15 @@ function Header() {
 
         {/* Logo */}
         <h1 className="text-3xl font-extrabold text-white drop-shadow cursor-pointer">
-          FoodHub
+          Foodapp
         </h1>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-10 text-white font-semibold text-lg">
           <a href="#" className="hover:text-gray-200 transition">Home</a>
-          <a href="#" className="hover:text-gray-200 transition">Restaurants</a>
-          <a href="#" className="hover:text-gray-200 transition">Offers</a>
-          <a href="#" className="hover:text-gray-200 transition">Orders</a>
+          {/* <a href="#" className="hover:text-gray-200 transition">Restaurants</a> */}
+          {/* <a href="#" className="hover:text-gray-200 transition">Offers</a> */}
+          <a href="#" className="hover:text-gray-200 transition">LogOut</a>
         </nav>
 
         {/* Right Section */}
@@ -34,11 +34,13 @@ function Header() {
          </Link>
 
           {/* Profile */}
-          <img
-            src="https://i.pravatar.cc/40"
-            alt="User"
-            className="w-10 h-10 rounded-full border-2 border-white cursor-pointer"
-          />
+       <Link to="/profile">
+            <img
+              src="https://i.pravatar.cc/40"
+              alt="User"
+              className="w-10 h-10 rounded-full border-2 border-white cursor-pointer"
+            />
+       </Link>
         </div>
 
         {/* Mobile Menu Button */}

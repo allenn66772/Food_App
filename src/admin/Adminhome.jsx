@@ -28,7 +28,7 @@ function Adminhome() {
           <div className="flex items-center gap-5">
             <span className="text-gray-700 font-semibold">Welcome, Admin</span>
             <img
-              src="https://i.pravatar.cc/50"
+              src=""
               alt="profile"
               className="w-10 h-10 rounded-full border-2 border-orange-500"
             />
@@ -71,21 +71,21 @@ function Adminhome() {
 
             <tbody>
               <tr className="border-b hover:bg-gray-50">
-                <td className="py-3">Spice Garden</td>
+                <td className="py-3">hotel one</td>
                 <td className="py-3 text-orange-600 font-semibold">Hotel</td>
                 <td className="py-3">10 Nov 2025</td>
                 <td className="py-3 text-green-600 font-semibold">Approved</td>
               </tr>
 
               <tr className="border-b hover:bg-gray-50">
-                <td className="py-3">John Mathew</td>
+                <td className="py-3">user 1</td>
                 <td className="py-3 text-blue-600 font-semibold">User</td>
                 <td className="py-3">9 Nov 2025</td>
                 <td className="py-3 text-green-600 font-semibold">Approved</td>
               </tr>
 
               <tr className="hover:bg-gray-50">
-                <td className="py-3">Tasty Harbour</td>
+                <td className="py-3">hotel 2</td>
                 <td className="py-3 text-orange-600 font-semibold">Hotel</td>
                 <td className="py-3">8 Nov 2025</td>
                 <td className="py-3 text-amber-600 font-semibold">Pending</td>

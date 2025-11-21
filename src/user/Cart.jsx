@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
+import { Link } from 'react-router-dom';
 
 function Cart() {
   return (
@@ -104,9 +105,9 @@ function Cart() {
               </div>
             </div>
 
-            <button className="mt-6 w-full bg-amber-500 text-white py-3 rounded-xl shadow hover:bg-amber-600">
+            <Link to="/checkout" className="mt-6 w-full bg-amber-500 text-white py-3 rounded-xl shadow hover:bg-amber-600">
               Proceed to Checkout
-            </button>
+            </Link>
           </div>
         </div>
       </div>

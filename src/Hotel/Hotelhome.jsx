@@ -32,7 +32,7 @@ function Hotelhome() {
           <div className="flex items-center gap-5">
             <span className="text-gray-700 font-semibold">Welcome, Owner</span>
             <img
-              src="https://i.pravatar.cc/50"
+              src=""
               alt="profile"
               className="w-10 h-10 rounded-full border-2 border-orange-500"
             />

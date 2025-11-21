@@ -9,7 +9,7 @@ function Hotelheader() {
         
         {/* Logo */}
         <h1 className="text-2xl font-bold text-red-600">
-          Food<span className="text-gray-800">Hub</span>
+          Food<span className="text-gray-800">app</span>
         </h1>
 
         {/* Desktop Nav */}
