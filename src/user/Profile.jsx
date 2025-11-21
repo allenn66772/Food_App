@@ -1,78 +1,76 @@
-import React from 'react'
+import React from "react";
+import { CiDeliveryTruck } from "react-icons/ci";
+import { FaLocationDot } from "react-icons/fa6";
+import Footer from '../user/Footer'
+import { MdFeedback, MdOutlinePayment, MdOutlineSecurity } from "react-icons/md";
 
 function Profile() {
   return (
-    <>
-      <div className="min-h-screen bg-gray-100 px-6 py-10 flex justify-center">
-      <div className="bg-white w-full max-w-2xl rounded-2xl shadow p-8">
-
-        {/* Profile Header */}
-        <div className="flex flex-col items-center">
-          <img
-            src=""
-            alt="profile"
-            className="w-28 h-28 rounded-full shadow"
-          />
-          <h2 className="text-2xl font-bold text-gray-800 mt-4">John Doe</h2>
-          <p className="text-gray-500">john.doe@example.com</p>
-        </div>
-
-        {/* Info Section */}
-        <div className="mt-10 space-y-6">
-          
-          <div>
-            <label className="text-gray-600 font-semibold">Full Name</label>
-            <input
-              type="text"
-              defaultValue="John Doe"
-              className="mt-1 w-full p-3 border rounded-lg bg-gray-50 focus:bg-white focus:outline-none"
-            />
+  <>
+      <div className="justify-center items-center">
+        <h2 className="text-4xl font-extrabold px-20 mt-10 text-orange-400">Your Account</h2>
+        <div className="ms-65 mt-20">
+          <div className="flex gap-5">
+            <div className="w-80 bg-white shadow-md rounded-xl p-5 flex items-start gap-4 cursor-pointer hover:shadow-lg transition">
+              <div className="text-red-700 text-4xl">
+                <CiDeliveryTruck />
+              </div>
+  
+              <div>
+                <h1 className="text-3xl font-semibold">Your Orders</h1>
+                <p className="text-gray-600 text-xl">Track, buy things again</p>
+              </div>
+            </div>
+             <div className="w-80 bg-white shadow-md rounded-xl p-5 flex items-start gap-4 cursor-pointer hover:shadow-lg transition">
+              <div className="text-red-700 text-4xl">
+                <MdOutlineSecurity />
+              </div>
+  
+              <div>
+                <h1 className="text-2xl font-semibold">Login and Security</h1>
+                <p className="text-gray-600 text-lg">Edit login name and mobile number</p>
+              </div>
+            </div>
+             <div className="w-80 bg-white shadow-md rounded-xl p-5 flex items-start gap-4 cursor-pointer hover:shadow-lg transition">
+              <div className="text-red-700 text-4xl">
+               <FaLocationDot />
+              </div>
+  
+              <div>
+                <h1 className="text-2xl font-semibold">Your Address</h1>
+                <p className="text-gray-600 text-lg">Edit Your Addresses for orders</p>
+              </div>
+            </div>
           </div>
-
-          <div>
-            <label className="text-gray-600 font-semibold">Email</label>
-            <input
-              type="email"
-              defaultValue="john.doe@example.com"
-              className="mt-1 w-full p-3 border rounded-lg bg-gray-50 focus:bg-white focus:outline-none"
-            />
+          {/*  */}
+          <div className="flex gap-5 mt-9">
+              <div className="w-80 bg-white shadow-md rounded-xl p-5 flex items-start gap-4 cursor-pointer hover:shadow-lg transition">
+              <div className="text-red-700 text-4xl">
+              <MdFeedback />
+              </div>
+  
+              <div>
+                <h1 className="text-2xl font-semibold">Contact us</h1>
+                <p className="text-gray-600 text-lg">Contact our customer service via phone or chat</p>
+              </div>
+            </div>
+             <div className="w-80 bg-white shadow-md rounded-xl p-5 flex items-start gap-4 cursor-pointer hover:shadow-lg transition">
+              <div className="text-red-700 text-4xl">
+           <MdOutlinePayment />
+              </div>
+  
+              <div>
+                <h1 className="text-2xl font-semibold">Payment Options</h1>
+                <p className="text-gray-600 text-lg">Edit or Add Payment Methods</p>
+              </div>
+            </div>
+            
           </div>
-
-          <div>
-            <label className="text-gray-600 font-semibold">Phone Number</label>
-            <input
-              type="text"
-              defaultValue="+91 9876543210"
-              className="mt-1 w-full p-3 border rounded-lg bg-gray-50 focus:bg-white focus:outline-none"
-            />
-          </div>
-
-          <div>
-            <label className="text-gray-600 font-semibold">Address</label>
-            <textarea
-              defaultValue="123, Main Street, Kochi, Kerala"
-              className="mt-1 w-full p-3 border rounded-lg bg-gray-50 focus:bg-white focus:outline-none"
-              rows={3}
-            ></textarea>
-          </div>
-
-        </div>
-
-        {/* Buttons */}
-        <div className="mt-8 flex justify-between">
-          <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-            Save Changes
-          </button>
-
-          <button className="px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
-            Logout
-          </button>
         </div>
       </div>
-    </div>
-    
-    </>
-  )
+      <Footer/>
+  </>
+  );
 }
 
-export default Profile
+export default Profile;

@@ -129,7 +129,7 @@ function Checkout() {
           </div>
 
           {/* Pay Button */}
-          <button className="w-full bg-gradient-to-r from-orange-600 to-amber-600 text-white font-bold py-3 rounded-xl text-lg shadow-lg hover:opacity-90 transition">
+          <button className="w-full bg-linear-to-r from-orange-600 to-amber-600 text-white font-bold py-3 rounded-xl text-lg shadow-lg hover:opacity-90 transition">
             Place Order
           </button>
         </div>

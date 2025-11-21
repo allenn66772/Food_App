@@ -17,7 +17,7 @@ function Header() {
           <a href="#" className="hover:text-gray-200 transition">Home</a>
           {/* <a href="#" className="hover:text-gray-200 transition">Restaurants</a> */}
           {/* <a href="#" className="hover:text-gray-200 transition">Offers</a> */}
-          <a href="#" className="hover:text-gray-200 transition">LogOut</a>
+          {/* <a href="#" className="hover:text-gray-200 transition">LogOut</a> */}
         </nav>
 
         {/* Right Section */}
@@ -34,13 +34,26 @@ function Header() {
          </Link>
 
           {/* Profile */}
-       <Link to="/profile">
-            <img
-              src="https://i.pravatar.cc/40"
-              alt="User"
-              className="w-10 h-10 rounded-full border-2 border-white cursor-pointer"
-            />
-       </Link>
+  <details className="relative inline-block">
+  <summary className="list-none cursor-pointer">
+    <img
+      src="https://i.pravatar.cc/40"
+      alt="User"
+      className="w-10 h-10 rounded-full border-2 border-white cursor-pointer"
+    />
+  </summary>
+
+  <div
+    className="absolute right-0 mt-3 w-44 bg-white shadow-xl rounded-xl p-3
+               animate-dropdown"
+  >
+    <ul className="text-sm text-gray-700 space-y-2">
+      <Link to='/profile' className="p-2 rounded-lg hover:bg-gray-100 cursor-pointer">Profile</Link>
+      
+      <li className="p-2 rounded-lg hover:bg-gray-100 cursor-pointer">Logout</li>
+    </ul>
+  </div>
+</details>
         </div>
 
         {/* Mobile Menu Button */}

@@ -2,6 +2,7 @@ import React from "react";
 import Commonheader from "./Commonheader";
 import { Link } from "react-router-dom";
 import Footer from "../user/Footer";
+import About from './About'
 
 function Landingpage() {
   return (
@@ -77,6 +78,7 @@ function Landingpage() {
           </div>
         </div>
       </div>
+      <About/>
       <Footer/>
     </>
   );

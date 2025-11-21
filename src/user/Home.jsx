@@ -2,6 +2,8 @@ import React from 'react'
 import Footer from './Footer'
 import Header from './Header'
 
+
+
 function Home() {
   return (
     <>
@@ -14,11 +16,16 @@ function Home() {
       </h1>
 
       {/* Search Bar */}
-      <div className="mb-6">
+      <div className="mb-6 flex">
+        <input
+          type="text"
+          placeholder= "Enter Your >location"
+          className="w-45 p-3 rounded-tl-2xl rounded-bl-2xl border-orange-400 shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+        />
         <input
           type="text"
           placeholder="Search for food, restaurants..."
-          className="w-full p-3 rounded-xl border shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+          className="w-full p-3 rounded-tr-2xl rounded-br-2xl  border-orange-400 shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-amber-500"
         />
       </div>
 
