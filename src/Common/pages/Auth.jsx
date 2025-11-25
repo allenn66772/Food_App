@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FaCircleUser } from "react-icons/fa6";
 import { Link, Navigate, useNavigate } from "react-router-dom";
-// import { LoginAPI, registerAPI } from "../../Service/allAPI";
+import { LoginAPI, registerAPI } from "../../Service/allAPI";
 import { toast } from "react-toastify";
 
 function Auth({ register }) {
