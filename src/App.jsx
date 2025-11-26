@@ -11,6 +11,7 @@ import Profile from './User/pages/Profile'
 import Addfood from './Hotel/pages/Addfood'
 import Orders from './Hotel/pages/Orders'
 import LoginAs from './Common/pages/LoginAs'
+import AddDish from './Hotel/AddDish'
 
 function App() {
   
@@ -34,8 +35,9 @@ function App() {
     <Route path='/profile' element={<Profile/>}/>
 
     {/* Hotel */}
-    <Route path='/add-food' element={<Addfood/>}/>
+    <Route path='/hotel-panel' element={<Addfood/>}/>
     <Route path='/orders' element={<Orders/>}/>
+    <Route path='/add-food' element={<AddDish/>}/>
 
     </Routes>
     </>
