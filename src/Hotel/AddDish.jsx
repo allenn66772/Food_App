@@ -1,15 +1,61 @@
-import React, { useState } from 'react'
+import React, { useEffect, useEffectEvent, useState } from 'react'
+import { AddFoodAPI } from '../Service/allAPI'
 
 function AddDish() {
     const [uploadImages,setuploadImages]=useState([])
+    const [token,settoken]=useState("")
+    const [preview,setpreview]=useState("")
     const [foodDetails,setfoodDetails]=useState({
         name:"",
         price:"",
         category:"",
-        description:"",
+        descryption:"",
         uploadImages:[]
 
     })
+
+    const  handleAddFood =async()=>{
+      const {name,price,category,descryption,uploadImages}=foodDetails
+      if(!name || !price || !category || !descryption|| uploadImages.length ==0){
+        alert("Fill out the fields completely")
+      }else{
+        //reqheader
+        const reqHeader ={
+        "Authorization":`Bearer ${token}`
+      }
+       //reqbody
+       const reqbody =new FormData()
+       for(let key in foodDetails){
+        if (key !="uploadImages"){
+          reqbody.append(key,foodDetails[key])
+        }else{
+          foodDetails.uploadImages.forEach(img=>{
+            reqbody.append("uploadImages",img)
+          })
+        }
+       }
+        try{
+          const result=await AddFoodAPI(reqbody,reqHeader)
+          console.log(result);
+          if (result.status ==200 ){
+            alert("Food Added Successfully")
+          }else if(result.status ==401 ){
+            alert("Something went wrong") 
+             
+          }else{
+            alert("erroe")
+          }
+          
+
+        }catch(error){
+          console.log(error);
+          
+        }
+
+
+      }
+      
+    }
 
   const Handlefile = (e) => {
     console.log(e.target.files[0]);
@@ -27,6 +73,12 @@ function AddDish() {
 
 
     console.log(foodDetails);
+
+    useEffect(()=>{
+      if(sessionStorage.getItem("token")){
+        settoken(sessionStorage.getItem("token"))
+      }
+    })
     
   return (
     <>
@@ -76,7 +128,7 @@ aria-label="Category"
 <label className="block">
 <span className="text-sm font-medium text-gray-700">Description</span>
 <textarea
-rows={4} onChange={(e)=>setfoodDetails({...foodDetails,description:e.target.value})}
+rows={4} onChange={(e)=>setfoodDetails({...foodDetails,descryption:e.target.value})}
 className="mt-1 block w-full border border-gray-200 rounded-lg p-3 bg-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-200"
 placeholder="Short description of the dish"
 aria-label="Description"
@@ -85,7 +137,7 @@ aria-label="Description"
 
 
 <div className="flex items-center gap-3 pt-2">
-<button className="px-5 py-3 bg-blue-600 text-white rounded-lg shadow hover:brightness-105 transition">
+<button type='button' onClick={()=>handleAddFood()} className="px-5 py-3 bg-blue-600 text-white rounded-lg shadow hover:brightness-105 transition">
 Publish Food
 </button>
 
@@ -137,7 +189,7 @@ Save Draft
 <div className="rounded-md overflow-hidden shadow-sm">
 <img
 alt="Food preview"
-src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='480'><rect width='100%' height='100%' fill='%23F3F4F6'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%239CA3AF' font-size='20'>Image Preview</text></svg>"
+src={preview}
 className="w-full h-36 object-cover"
 />
 </div>

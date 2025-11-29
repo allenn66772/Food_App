@@ -14,7 +14,7 @@ function Addfood() {
           <li className="hover:text-gray-200 cursor-pointer">Dashboard</li>
           <li className="hover:text-gray-200 cursor-pointer">Orders</li>
           <li className="hover:text-gray-200 cursor-pointer">Menu Items</li>
-        <Link to='/added-dishes' className="hover:text-gray-200 cursor-pointer">  Added Dishes</Link>
+        <Link to='/add-food' className="hover:text-gray-200 cursor-pointer">  Added Dishes</Link>
           <li className="hover:text-gray-200 cursor-pointer">Settings</li>
         </ul>
       </aside>
