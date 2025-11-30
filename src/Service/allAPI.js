@@ -16,3 +16,7 @@ export const LoginAPI =async (reqBody)=>{
 export const AddFoodAPI =async(reqBody,reqHeader)=>{
     return await CommonAPI("POST",`${SERVERURL}/add-food`,reqBody,reqHeader)
 }
+//get all food
+export const GetFoodAPI =async(searchKey,reqHeader)=>{
+    return await CommonAPI("GET",`${SERVERURL}/all-foods?search=${searchKey}`,{},reqHeader)
+}

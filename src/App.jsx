@@ -12,6 +12,7 @@ import Addfood from './Hotel/pages/Addfood'
 import Orders from './Hotel/pages/Orders'
 import LoginAs from './Common/pages/LoginAs'
 import AddDish from './Hotel/AddDish'
+import Homefood from './Common/pages/Homefood'
 
 function App() {
   
@@ -27,6 +28,7 @@ function App() {
     <Route path="/login" element={<Auth/>}/>
     <Route path='/register' element={<Auth register/>}/>
     <Route path='*' element={<Pnf/>}/>
+    <Route path='/home'element={<Homefood/>}/>
     <Route path='/loginas' element={<LoginAs/>}/>
 
     {/* User */}

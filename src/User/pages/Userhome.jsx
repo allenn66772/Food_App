@@ -25,7 +25,7 @@ function Userhome() {
       </div>
 
       {/* Category Buttons */}
-      <div className="flex gap-3 mb-6 overflow-x-auto pb-2">
+      {/* <div className="flex gap-3 mb-6 overflow-x-auto pb-2">
         {["All", "Indian", "Chinese", "Snacks", "Drinks", "Desserts"].map(
           (cat) => (
             <button
@@ -36,7 +36,7 @@ function Userhome() {
             </button>
           )
         )}
-      </div>
+      </div> */}
 
       {/* Food Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
