@@ -13,6 +13,7 @@ import Orders from './Hotel/pages/Orders'
 import LoginAs from './Common/pages/LoginAs'
 import AddDish from './Hotel/AddDish'
 import Homefood from './Common/pages/Homefood'
+import AddedDishes from './Hotel/pages/AddedDishes'
 
 function App() {
   
@@ -40,6 +41,7 @@ function App() {
     <Route path='/hotel-panel' element={<Addfood/>}/>
     <Route path='/orders' element={<Orders/>}/>
     <Route path='/add-food' element={<AddDish/>}/>
+    <Route path='/added-dishes' element={<AddedDishes/>}/>
 
     </Routes>
     </>

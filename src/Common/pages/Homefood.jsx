@@ -1,44 +1,45 @@
-import React, { useEffect, useState } from 'react'
-import Header from '../components/Header'
-import { FaArrowRight } from 'react-icons/fa'
-import { GetFoodAPI } from '../../Service/allAPI'
+import React, { useEffect, useState } from "react";
+import Header from "../components/Header";
+import { FaArrowRight } from "react-icons/fa";
+import { GetFoodAPI } from "../../Service/allAPI";
+import SERVERURL from "../../Service/serverURL";
 
 function Homefood() {
-  const [token, settoken] = useState("")
-  const [SearchKey, setsearchKey] = useState("")
-  const [allFoods, setallFoods] = useState([])
+  const [token, settoken] = useState("");
+  const [SearchKey, setsearchKey] = useState("");
+  const [allFoods, setallFoods] = useState([]);
 
   const getAllFood = async (usertoken) => {
     const reqHeader = {
       Authorization: `Bearer ${usertoken}`,
-    }
+    };
 
     try {
-      const result = await GetFoodAPI(SearchKey, reqHeader)
-      console.log(result)
+      const result = await GetFoodAPI(SearchKey, reqHeader);
+      console.log(result);
 
       if (result.status === 200) {
-        setallFoods(result.data)
+        setallFoods(result.data);
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   // Load token once
   useEffect(() => {
-    const usertoken = sessionStorage.getItem("token")
+    const usertoken = sessionStorage.getItem("token");
     if (usertoken) {
-      settoken(usertoken)
+      settoken(usertoken);
     }
-  }, [])
+  }, []);
 
   // Fetch foods when token or search text changes
   useEffect(() => {
     if (token) {
-      getAllFood(token)
+      getAllFood(token);
     }
-  }, [token, SearchKey])
+  }, [token, SearchKey]);
 
   return (
     <>
@@ -72,39 +73,50 @@ function Homefood() {
           Available Foods
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {allFoods.length > 0 ? (
             allFoods.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition"
-              >
-                <div className="relative">
-                  <img
-                    src={item.uploadImages?.[0] || "https://via.placeholder.com/300"}
-                    className="h-48 w-full object-cover"
-                  />
-                  <span className="absolute top-3 left-3 bg-red-500 text-white px-2 py-1 text-sm rounded-lg">
-                    {item.discount || 0}% OFF
-                  </span>
-                </div>
+             <div
+  key={index}
+  className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition 
+             w-[260px] h-[380px] mx-auto"
+>
+  <div className="relative h-[180px] w-full bg-gray-200 flex justify-center items-center">
+    {item.uploadImages && item.uploadImages.length > 0 ? (
+      <img
+        src={`${SERVERURL}/imgUploads/${item.uploadImages[0]}`}
+        alt="Food"
+        className="h-full w-full object-cover"
+      />
+    ) : (
+      <p className="font-bold text-red-600">No Image</p>
+    )}
 
-                <div className="p-4">
-                  <h2 className="font-semibold text-xl">{item.name}</h2>
-                  <p className="text-gray-600 mt-1">₹{item.price}</p>
-                  <button className="w-full mt-3 bg-green-600 text-white py-2 rounded-lg">
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
+    <span className="absolute top-3 left-3 bg-red-500 text-white px-2 py-1 text-sm rounded-lg">
+      {item.discount || 0}% OFF
+    </span>
+  </div>
+
+  <div className="p-4">
+    <h2 className="font-semibold text-lg truncate">{item.name}</h2>
+    <p className="text-gray-600 mt-1">₹{item.price}</p>
+
+    <button className="w-full mt-3 bg-green-600 text-white py-2 rounded-lg">
+      Add to Cart
+    </button>
+  </div>
+</div>
+
             ))
           ) : (
-            <p className="text-center col-span-4 text-gray-600">No Food Added</p>
+            <p className="text-center col-span-4 text-gray-600">
+              No Food Added
+            </p>
           )}
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Homefood
+export default Homefood;
